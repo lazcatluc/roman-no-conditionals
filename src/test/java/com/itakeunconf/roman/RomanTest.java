@@ -217,6 +217,16 @@ public class RomanTest {
 		assertRepresentationOf(500).isEqualTo("D");
 	}
 	
+	@Test
+	public void fourFourNine() throws Exception {
+		assertRepresentationOf(449).isEqualTo("CDXLIX");
+	}
+	
+	@Test
+	public void fourSixFive() throws Exception {
+		assertRepresentationOf(465).isEqualTo("CDLXV");
+	}
+	
 	private String roman(int i) {
 		return romanRepresentation.getRomanRepresentation(i);
 	}

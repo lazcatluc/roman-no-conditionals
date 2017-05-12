@@ -1,13 +1,11 @@
 package com.itakeunconf.roman.configuration;
 
 import com.itakeunconf.roman.RomanRepresentation;
+import com.itakeunconf.roman.multiple.of.Doubler;
 import com.itakeunconf.roman.multiple.of.Fifty;
 import com.itakeunconf.roman.multiple.of.Five;
 import com.itakeunconf.roman.multiple.of.FiveHundred;
-import com.itakeunconf.roman.multiple.of.Hundred;
 import com.itakeunconf.roman.multiple.of.RepresentationMutator;
-import com.itakeunconf.roman.multiple.of.Ten;
-import com.itakeunconf.roman.multiple.of.Thousand;
 
 public class RomanRepresentationInitializer {
 	
@@ -17,11 +15,11 @@ public class RomanRepresentationInitializer {
 		romanRepresentation = new RomanRepresentation();
 		RepresentationMutator representationMutator = new RepresentationMutator();
 		Five five = new Five(romanRepresentation, representationMutator);
-		Ten ten = new Ten(five);
+		Doubler ten = new Doubler(five, 5, "V");
 		Fifty fifty = new Fifty(romanRepresentation, five, ten, representationMutator);
-		Hundred hundred = new Hundred(fifty);
+		Doubler hundred = new Doubler(fifty, 50, "L");
 		FiveHundred fiveHundred = new FiveHundred(romanRepresentation, hundred, fifty, ten, representationMutator);
-		Thousand thousand = new Thousand(fiveHundred);
+		Doubler thousand = new Doubler(fiveHundred, 500, "D");
 		
 		hundred.addMultiple(0, "");
 		hundred.addMultiple(100, "C");

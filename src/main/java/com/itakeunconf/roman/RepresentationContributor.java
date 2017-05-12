@@ -2,5 +2,5 @@ package com.itakeunconf.roman;
 
 @FunctionalInterface
 public interface RepresentationContributor {
-	void addMultiple(int multipleOfFifty, String representation);
+	void addMultiple(int multiple, String representation);
 }

@@ -6,10 +6,11 @@ import com.itakeunconf.roman.RomanRepresentation;
 public class Fifty implements RepresentationContributor {
 	private final RepresentationMutator representationMutator;
 	private final RomanRepresentation romanRepresentation;
-	private final Five five;
-	private final Ten ten;
+	private final RepresentationContributor five;
+	private final RepresentationContributor ten;
 	
-	public Fifty(RomanRepresentation romanRepresentation, Five five, Ten ten, RepresentationMutator representationMutator) {
+	public Fifty(RomanRepresentation romanRepresentation, RepresentationContributor five, 
+			RepresentationContributor ten, RepresentationMutator representationMutator) {
 		this.romanRepresentation = romanRepresentation;
 		this.five = five;
 		this.ten = ten;

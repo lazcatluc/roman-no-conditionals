@@ -1,6 +1,7 @@
 package com.itakeunconf.roman;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.*;
 
 import org.assertj.core.api.AbstractCharSequenceAssert;
 import org.junit.Before;
@@ -117,8 +118,13 @@ public class RomanTest {
 	}
 	
 	@Test
-	public void fortyNineIsIL() throws Exception {
-		assertRepresentationOf(49).isEqualTo("IL");
+	public void fortyNineIsXLIX() throws Exception {
+		assertRepresentationOf(49).isEqualTo("XLIX");
+	}
+	
+	@Test
+	public void ninetyNineIsC() throws Exception {
+		assertRepresentationOf(99).isEqualTo("XCIX");
 	}
 	
 	@Test
@@ -144,6 +150,21 @@ public class RomanTest {
 	@Test
 	public void twoHundredOneIsCCI() throws Exception {
 		assertRepresentationOf(201).isEqualTo("CCI");
+	}
+	
+	@Test
+	public void hundredNinety() throws Exception {
+		assertRepresentationOf(190).isEqualTo("CXC");
+	}
+	
+	@Test
+	public void hundredNinetySix() throws Exception {
+		assertRepresentationOf(196).isEqualTo("CXCVI");
+	}
+	
+	@Test
+	public void hundredNinetyNine() throws Exception {
+		assertRepresentationOf(199).isEqualTo("CXCIX");
 	}
 	
 	private String roman(int i) {

@@ -22,6 +22,7 @@ public class RomanRepresentationInitializer {
 		fifty.addMultiple(50, "L");
 		fifty.addMultiple(100, "C");
 		fifty.addMultiple(150, "CL");
+		fifty.addMultiple(200, "CC");
 	}
 	
 	public RomanRepresentation getRomanRepresentation() {

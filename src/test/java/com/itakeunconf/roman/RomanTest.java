@@ -166,6 +166,11 @@ public class RomanTest {
 		assertRepresentationOf(199).isEqualTo("CXCIX");
 	}
 	
+	@Test
+	public void twoHundredNinetyNine() throws Exception {
+		assertRepresentationOf(299).isEqualTo("CCXCIX");
+	}
+	
 	private String roman(int i) {
 		return romanRepresentation.getRomanRepresentation(i);
 	}

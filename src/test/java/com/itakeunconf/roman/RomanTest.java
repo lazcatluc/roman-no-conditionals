@@ -1,7 +1,6 @@
 package com.itakeunconf.roman;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.*;
 
 import org.assertj.core.api.AbstractCharSequenceAssert;
 import org.junit.Before;

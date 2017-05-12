@@ -28,6 +28,7 @@ public class RomanRepresentationInitializer {
 		fiveHundred.addMultiple(500, "D");
 		fiveHundred.addMultiple(1000, "M");
 		fiveHundred.addMultiple(1500, "MD");
+		fiveHundred.addMultiple(2000, "MM");
 	}
 	
 	public RomanRepresentation getRomanRepresentation() {

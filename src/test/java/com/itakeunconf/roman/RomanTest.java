@@ -1,6 +1,7 @@
 package com.itakeunconf.roman;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.*;
 
 import org.assertj.core.api.AbstractCharSequenceAssert;
 import org.junit.Before;
@@ -167,8 +168,53 @@ public class RomanTest {
 	}
 	
 	@Test
+	public void twoHundredEightyNine() throws Exception {
+		assertRepresentationOf(289).isEqualTo("CCLXXXIX");
+	}
+	
+	@Test
 	public void twoHundredNinetyNine() throws Exception {
 		assertRepresentationOf(299).isEqualTo("CCXCIX");
+	}
+
+	@Test
+	public void threeHundredEightyNine() throws Exception {
+		assertRepresentationOf(389).isEqualTo("CCCLXXXIX");
+	}
+	
+	@Test
+	public void threeHundredNinety() throws Exception {
+		assertRepresentationOf(390).isEqualTo("CCCXC");
+	}
+	
+	@Test
+	public void threeHundredNinetyNine() throws Exception {
+		assertRepresentationOf(399).isEqualTo("CCCXCIX");
+	}
+	
+	@Test
+	public void fourHundred() throws Exception {
+		assertRepresentationOf(400).isEqualTo("CD");
+	}
+	
+	@Test
+	public void fourHundredEightyNine() throws Exception {
+		assertRepresentationOf(489).isEqualTo("CDLXXXIX");
+	}
+	
+	@Test
+	public void fourHundredNinety() throws Exception {
+		assertRepresentationOf(490).isEqualTo("CDXC");
+	}
+	
+	@Test
+	public void fourHundredNinetyNine() throws Exception {
+		assertRepresentationOf(499).isEqualTo("CDXCIX");
+	}
+	
+	@Test
+	public void fiveHundred() throws Exception {
+		assertRepresentationOf(500).isEqualTo("D");
 	}
 	
 	private String roman(int i) {

@@ -24,11 +24,11 @@ public class Fifty implements RepresentationContributor {
 		romanRepresentation.setRomanRepresentation(multipleOfFifty - 11, 
 				romanRepresentation.getRomanRepresentation(multipleOfFifty - 20) + "IX");
 		ten.addMultiple(multipleOfFifty,representation);
-		romanRepresentation.setRomanRepresentation(multipleOfFifty - 1, 
-				romanRepresentation.getRomanRepresentation(multipleOfFifty - 10) + "IX");
 		ten.addMultiple(multipleOfFifty + 10, representation + "X");
 		ten.addMultiple(multipleOfFifty + 20, representation + "XX");
 		ten.addMultiple(multipleOfFifty + 30, representation + "XXX");
+		romanRepresentation.setRomanRepresentation(multipleOfFifty - 1, 
+				romanRepresentation.getRomanRepresentation(multipleOfFifty - 10) + "IX");
 	}
 	
 	

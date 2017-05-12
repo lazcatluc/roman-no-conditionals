@@ -3,19 +3,13 @@ package com.itakeunconf.roman;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.assertj.core.api.AbstractCharSequenceAssert;
-import org.junit.Before;
 import org.junit.Test;
 
 import com.itakeunconf.roman.configuration.RomanRepresentationInitializer;
 
 public class RomanTest {
 	
-	private RomanRepresentation romanRepresentation;
-	
-	@Before
-	public void setUp() {
-		romanRepresentation = new RomanRepresentationInitializer().getRomanRepresentation();
-	}
+	private RomanRepresentation romanRepresentation = new RomanRepresentationInitializer().getRomanRepresentation();
 	
 	@Test
 	public void zeroIsEmpty() throws Exception {

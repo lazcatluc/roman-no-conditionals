@@ -266,6 +266,11 @@ public class RomanTest {
 	public void represents1889() throws Exception {
 		assertRepresentationOf(1889).isEqualTo("MDCCCLXXXIX");
 	}
+	
+	@Test
+	public void represents2899() throws Exception {
+		assertRepresentationOf(2899).isEqualTo("MMDCCCXCIX");
+	}
 
 	private String roman(int i) {
 		return romanRepresentation.getRomanRepresentation(i);

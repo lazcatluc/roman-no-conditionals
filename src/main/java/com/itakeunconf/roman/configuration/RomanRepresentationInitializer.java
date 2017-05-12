@@ -19,16 +19,15 @@ public class RomanRepresentationInitializer {
 		Ten ten = new Ten(five);
 		Fifty fifty = new Fifty(romanRepresentation, five, ten, representationMutator);
 		Hundred hundred = new Hundred(fifty);
-		FiveHundred fiveHundred = new FiveHundred(romanRepresentation, fifty, ten, representationMutator);
+		FiveHundred fiveHundred = new FiveHundred(romanRepresentation, hundred, fifty, ten, representationMutator);
 		
 		hundred.addMultiple(0, "");
 		hundred.addMultiple(100, "C");
 		hundred.addMultiple(200, "CC");
 		hundred.addMultiple(300, "CCC");
 		fiveHundred.addMultiple(500, "D");
-		hundred.addMultiple(600, "DC");
-		hundred.addMultiple(700, "DCC");
-		hundred.addMultiple(800, "DCCC");
+		fiveHundred.addMultiple(1000, "M");
+		fiveHundred.addMultiple(1500, "MD");
 	}
 	
 	public RomanRepresentation getRomanRepresentation() {

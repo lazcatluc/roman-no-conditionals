@@ -232,6 +232,36 @@ public class RomanTest {
 		assertRepresentationOf(732).isEqualTo("DCCXXXII");
 	}
 	
+	@Test
+	public void oneThousand() throws Exception {
+		assertRepresentationOf(1000).isEqualTo("M");
+	}
+	
+	@Test
+	public void nineEightTwo() throws Exception {
+		assertRepresentationOf(982).isEqualTo("CMLXXXII");
+	}
+
+	@Test
+	public void nineNineNine() throws Exception {
+		assertRepresentationOf(999).isEqualTo("CMXCIX");
+	}
+	
+	@Test
+	public void eightEightNine() throws Exception {
+		assertRepresentationOf(889).isEqualTo("DCCCLXXXIX");
+	}
+	
+	@Test
+	public void represents1338() throws Exception {
+		assertRepresentationOf(1338).isEqualTo("MCCCXXXVIII");
+	}
+	
+	@Test
+	public void represents1474() throws Exception {
+		assertRepresentationOf(1474).isEqualTo("MCDLXXIV");
+	}
+		
 	private String roman(int i) {
 		return romanRepresentation.getRomanRepresentation(i);
 	}

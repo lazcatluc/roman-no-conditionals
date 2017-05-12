@@ -16,10 +16,6 @@ public class RomanTest {
 		assertRepresentationOf(0).isEqualTo("");
 	}
 
-	public AbstractCharSequenceAssert<?, String> assertRepresentationOf(final int i) {
-		return assertThat(roman(i));
-	}
-	
 	@Test
 	public void oneIsI() throws Exception {
 		assertRepresentationOf(1).isEqualTo("I");
@@ -265,6 +261,10 @@ public class RomanTest {
 		assertRepresentationOf(2899).isEqualTo("MMDCCCXCIX");
 	}
 
+	private AbstractCharSequenceAssert<?, String> assertRepresentationOf(final int i) {
+		return assertThat(roman(i));
+	}
+	
 	private String roman(int i) {
 		return romanRepresentation.getRomanRepresentation(i);
 	}

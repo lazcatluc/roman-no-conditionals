@@ -1,6 +1,7 @@
 package com.itakeunconf.roman;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.*;
 
 import org.assertj.core.api.AbstractCharSequenceAssert;
 import org.junit.Before;
@@ -224,6 +225,11 @@ public class RomanTest {
 	@Test
 	public void fourSixFive() throws Exception {
 		assertRepresentationOf(465).isEqualTo("CDLXV");
+	}
+	
+	@Test
+	public void sevenThreeTwo() throws Exception {
+		assertRepresentationOf(732).isEqualTo("DCCXXXII");
 	}
 	
 	private String roman(int i) {
